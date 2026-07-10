@@ -1,0 +1,27 @@
+<!-- @dsCard group="Type" viewport="700x340" name="Arabic type" subtitle="Alexandria — variable 100–900 · prices use Western digits, small decimals" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-ar);padding:18px;background:#fff;box-sizing:border-box;color:var(--ink-1)}
+  .row{display:flex;align-items:baseline;gap:14px;padding:3px 0;flex-direction:row-reverse;justify-content:flex-end}
+  .meta{width:230px;flex-shrink:0;font-size:11px;color:var(--ink-3);font-family:var(--font-en);direction:ltr;text-align:left}
+  .ar{direction:rtl}
+  .weights{display:flex;flex-direction:row-reverse;gap:20px;align-items:baseline;padding:8px 0 2px;justify-content:flex-end}
+  .w{display:flex;flex-direction:column;gap:2px;align-items:center}
+  .w .s{font-size:26px;line-height:1.3}
+  .w .h{font-size:9.5px;color:var(--ink-3);font-family:var(--font-en)}
+  a{color:var(--speedi-red)}a:hover{color:var(--speedi-red-pressed)}
+</style></head><body>
+  <div class="weights">
+    <div class="w"><span class="s ar" style="font-weight:300">سبيدي</span><span class="h">Light 300</span></div>
+    <div class="w"><span class="s ar" style="font-weight:400">سبيدي</span><span class="h">Regular 400</span></div>
+    <div class="w"><span class="s ar" style="font-weight:500">سبيدي</span><span class="h">Medium 500</span></div>
+    <div class="w"><span class="s ar" style="font-weight:600">سبيدي</span><span class="h">SemiBold 600</span></div>
+    <div class="w"><span class="s ar" style="font-weight:700">سبيدي</span><span class="h">Bold 700</span></div>
+    <div class="w"><span class="s ar" style="font-weight:800">سبيدي</span><span class="h">ExtraBold 800</span></div>
+  </div>
+  <div class="row"><span class="meta">Slogan · ExtraBold</span><span class="ar" style="font-size:22px;font-weight:800;color:var(--speedi-red)">الكل يوصّلك، بس حنا نوفّر عليك</span></div>
+  <div class="row"><span class="meta">Title · 18 Bold</span><span class="ar" style="font-size:18px;font-weight:700">المخبوزات</span></div>
+  <div class="row"><span class="meta">Body · 16 Regular</span><span class="ar" style="font-size:16px;font-weight:400">توصيل سريع لجميع مقاضيك الطازجة</span></div>
+  <div class="row"><span class="meta">Price in Arabic UI — ALWAYS Western digits (3.99, never ٣٫٩٩); decimals at 62%</span><span class="ar" style="display:inline-flex;align-items:baseline;gap:8px"><span style="font-size:14px;font-weight:600">حليب المراعي</span><span dir="ltr" style="font-family:var(--font-en);font-weight:800;color:var(--speedi-red)"><span style="font-size:11px;font-weight:700">⃁ </span><span style="font-size:17px">3</span><span style="font-size:11px">.99</span></span><span dir="ltr" style="font-family:var(--font-en);font-size:10px;color:var(--ink-3);text-decoration:line-through">5.25</span></span></div>
+</body></html>

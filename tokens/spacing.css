@@ -1,0 +1,23 @@
+/* Speedi — shape, spacing & elevation tokens (values verbatim from Figma/PDF) */
+:root {
+  /* Corner radii */
+  --radius-control: 8px;       /* buttons, inputs, back chip */
+  --radius-card: 12px;         /* cards, banners, brand tiles (also PDF merch spec) */
+  --radius-pill: 100px;        /* pills (EN language toggle, tags) */
+
+  /* Control heights (logical scale) */
+  --height-button: 48px;
+  --height-navbar: 48px;
+  --height-back-chip: 30px;
+
+  /* Common paddings seen in components */
+  --pad-button: 10px;
+  --pad-card: 12px;
+  --pad-page: 15px;            /* 30px at 750 → 15pt gutters */
+
+  /* Borders & elevation — Speedi is flat: hairline borders, no drop shadows */
+  --border-hairline: inset 0 0 0 1px rgb(231, 231, 231); /* @kind shadow */
+
+  /* Scrim/fade used above bottom bars */
+  --fade-white: linear-gradient(180deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 100%); /* @kind other */
+}

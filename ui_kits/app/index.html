@@ -1,0 +1,74 @@
+<!-- @dsCard group="App UI Kit" viewport="390x700" name="Speedi App" subtitle="Navigable app: Home, Product, Cart, Checkout, Account" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Speedi App — UI Kit</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  html,body{margin:0;height:100%}
+  body{font-family:var(--font-en);background:#E8E8E5;display:flex;justify-content:center}
+  a{color:var(--speedi-red)}a:hover{color:var(--speedi-red-pressed)}
+  .kit-tabs{position:fixed;top:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;background:#fff;border-radius:100px;padding:5px;box-shadow:0 0 0 1px var(--line-1);z-index:50}
+  .kit-tab{border:0;background:transparent;font-family:var(--font-en);font-size:12px;font-weight:500;color:var(--ink-2);padding:6px 13px;border-radius:100px;cursor:pointer}
+  .kit-tab:hover{color:var(--ink-1)}
+  .kit-tab.on{background:var(--speedi-red);color:#fff;font-weight:700}
+  .phone{width:375px;margin:58px auto 16px;background:var(--surface-page);border-radius:18px;box-shadow:0 0 0 1px var(--line-1);overflow:hidden;height:calc(100vh - 74px);position:relative}
+  .screenScroll{height:100%;overflow-y:auto;overflow-x:hidden;scrollbar-width:none}
+  .screenScroll::-webkit-scrollbar{display:none}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+function whenNS(cb){
+  const t0 = Date.now();
+  (function poll(){
+    const NS = window.SpeediDesignSystem_e741f3;
+    if (NS && NS.Home && NS.Cart) return cb(NS);
+    if (Date.now() - t0 > 8000) { document.getElementById('root').innerHTML = '<p style="padding:20px;font-size:13px;color:#8C8C8C">Design-system bundle not compiled yet — reload this page.</p>'; return; }
+    setTimeout(poll, 150);
+  })();
+}
+whenNS(function(NS){
+const { Home, ProductDetail, Cart, Checkout, Profile } = NS;
+const SCREENS = [
+  { key: 'home',     label: 'Home',     C: Home },
+  { key: 'pdp',      label: 'Product',  C: ProductDetail },
+  { key: 'cart',     label: 'Cart',     C: Cart },
+  { key: 'checkout', label: 'Checkout', C: Checkout },
+  { key: 'account',  label: 'Account',  C: Profile },
+];
+function Kit(){
+  const [tab, setTab] = React.useState(() => localStorage.getItem('speedi-app-tab') || 'home');
+  const scrollRef = React.useRef(null);
+  const pick = k => {
+    const known = SCREENS.some(s => s.key === k) ? k : 'home';
+    setTab(known);
+    try { localStorage.setItem('speedi-app-tab', known); } catch(e) {}
+    if (scrollRef.current) scrollRef.current.scrollTop = 0;
+  };
+  const s = SCREENS.find(x => x.key === tab) || SCREENS[0];
+  const C = s.C;
+  return (
+    <React.Fragment>
+      <nav className="kit-tabs">
+        {SCREENS.map(x => <button key={x.key} className={'kit-tab' + (x.key === tab ? ' on' : '')} onClick={() => pick(x.key)}>{x.label}</button>)}
+      </nav>
+      <div className="phone">
+        <div className="screenScroll" ref={scrollRef}>
+          <C onNav={pick} onBack={() => pick('home')} onOpenProduct={() => pick('pdp')} />
+        </div>
+      </div>
+    </React.Fragment>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Kit />);
+});
+</script>
+</body>
+</html>

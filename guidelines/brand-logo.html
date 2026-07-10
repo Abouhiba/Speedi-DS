@@ -1,0 +1,36 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="Logo & slogan" subtitle="SpeediLogo — English vector + Arabic wordmark (lang prop)" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../_ds_bundle.js"></script>
+<style>
+  body{margin:0;font-family:var(--font-en);background:#fff}
+  #root{display:flex;align-items:center;gap:34px;padding:24px 26px}
+  .sl{display:flex;flex-direction:column;gap:2px}
+  .en{font-size:19px;font-weight:600;color:var(--ink-1)}
+  .ar{font-family:var(--font-ar);font-size:17px;font-weight:700;color:var(--ink-1);direction:rtl}
+  .h{font-size:10.5px;color:var(--ink-3);margin-top:6px}
+  a{color:var(--speedi-red)}a:hover{color:#c9302a}
+</style></head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { SpeediLogo } = window.SpeediDesignSystem_e741f3;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.Fragment>
+    <div>
+      <div style={{transform:'scale(1.5)', transformOrigin:'left center', width:99, height:32}}><SpeediLogo /></div>
+      <div className="h" style={{marginTop:22}}>SpeediLogo · English · <span style={{fontFamily:'monospace'}}>lang="en"</span></div>
+      <div style={{transform:'scale(1.5)', transformOrigin:'left center', width:94, height:32, marginTop:22}}><SpeediLogo lang="ar" /></div>
+      <div className="h" style={{marginTop:22}}>SpeediLogo · Arabic · <span style={{fontFamily:'monospace'}}>lang="ar"</span></div>
+    </div>
+    <div className="sl">
+      <span className="en">You Save. We Deliver.</span>
+      <span className="ar">الكل يوصّلك، بس حنا نوفّر عليك</span>
+      <span className="h">Slogans — EN top-left, AR top-right on collateral</span>
+    </div>
+  </React.Fragment>
+);
+</script>
+</body></html>

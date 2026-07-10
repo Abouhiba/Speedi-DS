@@ -1,0 +1,29 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Motion" subtitle="Fast without feeling rushed — swift easing, no bounces in core UI" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-en);background:#fff;padding:16px;box-sizing:border-box}
+  .row{display:flex;gap:22px;align-items:flex-start}
+  .demo{display:flex;flex-direction:column;gap:8px;align-items:center}
+  .h{font-size:10px;color:var(--ink-3);text-align:center;max-width:130px}
+  .stage{width:130px;height:74px;background:var(--surface-page);border-radius:10px;position:relative;overflow:hidden}
+  .chip{position:absolute;left:12px;top:26px;width:52px;height:22px;border-radius:6px;background:var(--speedi-red)}
+  @media (prefers-reduced-motion: no-preference){
+    .m-tap .chip{animation:tap 1.6s var(--ease-swift) infinite}
+    .m-rise .chip{animation:rise 1.8s var(--ease-enter) infinite}
+    .m-fade .chip{animation:fadeswap 2s var(--ease-swift) infinite}
+    .m-cel .chip{animation:cel 2.2s var(--ease-celebrate) infinite}
+  }
+  @keyframes tap{0%,100%{transform:scale(1)}12%{transform:scale(.97)}24%{transform:scale(1)}}
+  @keyframes rise{0%{transform:translateY(12px);opacity:0}30%,80%{transform:translateY(0);opacity:1}100%{transform:translateY(0);opacity:1}}
+  @keyframes fadeswap{0%{opacity:0}25%,75%{opacity:1}100%{opacity:0}}
+  @keyframes cel{0%{transform:scale(.6) rotate(-8deg);opacity:0}40%,80%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(1);opacity:1}}
+  a{color:var(--speedi-red)}a:hover{color:var(--speedi-red-pressed)}
+</style></head><body>
+  <div class="row">
+    <div class="demo"><div class="stage m-tap"><div class="chip"></div></div><span class="h">Press · scale 0.97 · 120ms swift</span></div>
+    <div class="demo"><div class="stage m-rise"><div class="chip"></div></div><span class="h">Enter · rise 12px + fade · 200ms</span></div>
+    <div class="demo"><div class="stage m-fade"><div class="chip"></div></div><span class="h">Swap · crossfade · 200ms, no movement</span></div>
+    <div class="demo"><div class="stage m-cel"><div class="chip" style="border-radius:50%;width:36px;height:36px;left:47px;top:19px"></div></div><span class="h">Celebrate · overshoot · campaign moments ONLY</span></div>
+  </div>
+</body></html>

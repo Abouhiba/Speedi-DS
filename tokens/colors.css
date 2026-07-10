@@ -1,0 +1,70 @@
+/* Speedi — color tokens (refreshed 2026) */
+:root {
+  /* ── Brand ────────────────────────────────────── */
+  --speedi-red: #DD2A1F;                 /* primary */
+  --speedi-red-pressed: #B91F16;         /* press / hover-dark */
+  --speedi-red-tint: #FDEEEC;            /* light red wash — badges, selected states */
+  --speedi-green: #1EA13C;               /* success / fresh / free-delivery */
+  --speedi-green-tint: #E8F7EC;
+  --speedi-red-print: #EE2447;           /* PANTONE P 8-55 C — print identity red (unchanged) */
+
+  /* ── Ink (text) ───────────────────────────────── */
+  --ink-1: #262626;                      /* primary text */
+  --ink-2: #595959;                      /* secondary text */
+  --ink-3: #8C8C8C;                      /* muted, placeholders */
+  --ink-black: #141414;                  /* titles, nav */
+
+  /* ── Surface & line ───────────────────────────── */
+  --surface-page: #F6F6F4;               /* warm-neutral page */
+  --surface-card: #FFFFFF;
+  --surface-tile: #F4F4F2;               /* product-image tile behind cutouts */
+  --surface-store-tile: #F8FAFB;
+  --line-1: #EBEBE8;                     /* hairlines */
+  --line-2: #DBDBD8;
+
+  /* ── Campaign accents (promo system: 30+ campaign types) ── */
+  --promo-gold: #F5A800;                 /* deals, spin-the-wheel, points */
+  --promo-gold-tint: #FFF6E0;
+  --promo-violet: #6C3BD4;               /* bundles, member exclusives */
+  --promo-violet-tint: #F1EBFC;
+  --promo-blue: #2D6BFF;                 /* coupons, cashback */
+  --promo-blue-tint: #EAF0FF;
+  --promo-pink: #E5387E;                 /* free samples, gifts */
+  --promo-pink-tint: #FDEDF4;
+
+  /* ── Identity secondary pastels (unchanged, merch/category tiles) ── */
+  --brand-orange: #f26524;
+  --brand-navy: #00416b;
+  --brand-yellow: #ffcf01;
+  --pastel-lemon: #fff3aa;
+  --pastel-sky: #b7efff;
+  --pastel-gold: #ffe38f;
+  --pastel-peach: #ffd0a8;
+  --pastel-mint: #e4ffde;
+  --pastel-bone: #f6f6ee;
+  --pastel-gray: #ececec;
+  --pastel-rose: #ffe1e1;
+  --pastel-clay: #f3dbd1;
+  --pastel-cloud: #f5f6fa;
+  --pastel-butter: #ffeeba;
+  --pastel-ivory: #faf6ee;
+  --pastel-aqua: #e3fffb;
+  --pastel-periwinkle: #cbe0ff;
+  --pastel-pink: #ffe9f4;
+
+  /* ── Semantic aliases ────────────────────────────── */
+  --color-primary: var(--speedi-red);
+  --color-primary-pressed: var(--speedi-red-pressed);
+  --color-success: var(--speedi-green);
+  --text-body: var(--ink-1);
+  --text-secondary: var(--ink-2);
+  --text-muted: var(--ink-3);
+  --text-title: var(--ink-black);
+  --text-price: var(--speedi-red);
+  --text-strikethrough: var(--ink-3);
+  --text-on-primary: #FFFFFF;
+  --text-disabled: var(--line-2);
+  --surface-input: var(--surface-page);
+  --border-default: var(--line-1);
+
+}
