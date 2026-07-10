@@ -1,0 +1,41 @@
+<!-- @dsCard group="Figma Kit" viewport="700x420" name="Kit components" subtitle="All 94 families from the source Figma file, materialized verbatim" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body{margin:0;font-family:var(--font-en);background:var(--surface-page)}
+  #root{padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+  .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .lb{font-size:10px;color:var(--ink-3);width:92px;flex-shrink:0}
+  a{color:var(--speedi-red)}a:hover{color:var(--speedi-red-pressed)}
+</style></head><body>
+<div id="root"></div>
+<script type="text/babel">
+function whenNS(cb){
+  const t0 = Date.now();
+  (function poll(){
+    const NS = window.SpeediDesignSystem_e741f3;
+    if (NS && NS.Primary && NS.Component2 && NS.Product) return cb(NS);
+    if (Date.now() - t0 > 8000) { document.getElementById('root').innerHTML = '<p style="padding:20px;font-size:13px;color:#8C8C8C">Design-system bundle not compiled yet — reload this page.</p>'; return; }
+    setTimeout(poll, 150);
+  })();
+}
+whenNS(function(NS){
+const { Primary, Secondary, Disabled, NavigationBar, Component2, Component10, Component5, Component6, Choose1, Component1, Product, Price, PriceTag, Tag, Search } = NS;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.Fragment>
+    <div className="row"><span className="lb">Buttons</span><Primary text1="Primary" /><Secondary text1="Secondary" /><Disabled text1="Disabled" /></div>
+    <div className="row"><span className="lb">Selection</span><Component10 /><Choose1 /><Component5 /><Component6 /></div>
+    <div className="row"><span className="lb">Input</span><Component2 /></div>
+    <div className="row"><span className="lb">List row</span><div style={{width:390}}><Component1 text1="Message Settings" text2="On" /></div></div>
+    <div className="row"><span className="lb">Nav bar</span><div style={{background:'#fff'}}><NavigationBar text1="Delivery Address" /></div></div>
+    <div className="row"><span className="lb">Commerce</span><Product /><Price /><PriceTag /><Tag /></div>
+    <div className="row"><span className="lb">Search</span><Search /></div>
+  </React.Fragment>
+);
+});
+</script>
+</body></html>
