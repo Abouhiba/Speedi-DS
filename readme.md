@@ -57,12 +57,6 @@ All 94 component families from the source Figma file, materialized verbatim with
 
 **Screen blocks (@2x)**: `Component13` (recommended products) · `Component14` · `Component14_` (cart row) · `Component15` (delivery time) · `Component16` (delivery details) · `Component17` · `Component18` · `Component18_` (promo display) · `Component20` · `Component20_` (single-column product) · `Component21` (search list) · `Component21750` · `Component23` (settings) · `Component24` (bottom nav) · `Component26` · `Component27` · `Component40` · `Component44` · `Component48` · `Component58` · `Component62` · `Component70` · `Component71` · `Component71750` · `Component75` · `Component80` · `Component90` · `Component93` · `Component96` · `Component97` · `Component98` · `Component99` · `Component105` · `Component106` · `Component107` · `Component108` · `Component109` · `Component110` · `Component114` · `Top` (PDP header) · `Frame39` · `Frame83` · `Frame86` · `Frame109` · `Group25` · `Group32` · `Group46` · `Group70` · `Group72` · `Group76` · `Group92` · `Group118`
 
-## History & sources
-Refreshed in 2026 from the original Speedi identity (2019) and app design file. Sources, for the record:
-- Figma "Speedi V2 (Copy).fig": https://www.figma.com/design/cAKAxWXtNsMkPgimxwWBo6/Speedi-V2--Copy- (also https://www.figma.com/design/zq3EdZ1Fun2xb4BHcyyVXE/Speed?node-id=335-17775)
-- `uploads/speedi-guideline.pdf` — original identity guidelines (logo rules, print palette `#EE2447` PANTONE P 8-55 C, merch specs)
-- Refresh decisions: red deepened `#EF3F37→#DD2A1F`; Poppins→Hanken Grotesk; Alexandria for Arabic; campaign accent system, unified item card, motion principles, and profile completion added; slogan changed from «مقاضيك هي اللي تجيك» to «الكل يوصّلك، بس حنا نوفّر عليك».
-- The original Figma file's 94 raw component families are materialized verbatim in `components/kit/` (2019 styling, kept for reference and traceability); the refreshed `components/core` set is what new designs should use.
 
 ## Caveats
 - GE SS Two (legacy Arabic print face) is proprietary and not shipped; legacy print collateral only.
