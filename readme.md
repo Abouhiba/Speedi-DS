@@ -57,7 +57,6 @@ All 94 component families from the source Figma file, materialized verbatim with
 
 **Screen blocks (@2x)**: `Component13` (recommended products) · `Component14` · `Component14_` (cart row) · `Component15` (delivery time) · `Component16` (delivery details) · `Component17` · `Component18` · `Component18_` (promo display) · `Component20` · `Component20_` (single-column product) · `Component21` (search list) · `Component21750` · `Component23` (settings) · `Component24` (bottom nav) · `Component26` · `Component27` · `Component40` · `Component44` · `Component48` · `Component58` · `Component62` · `Component70` · `Component71` · `Component71750` · `Component75` · `Component80` · `Component90` · `Component93` · `Component96` · `Component97` · `Component98` · `Component99` · `Component105` · `Component106` · `Component107` · `Component108` · `Component109` · `Component110` · `Component114` · `Top` (PDP header) · `Frame39` · `Frame83` · `Frame86` · `Frame109` · `Group25` · `Group32` · `Group46` · `Group70` · `Group72` · `Group76` · `Group92` · `Group118`
 
-
 ## Caveats
 - GE SS Two (legacy Arabic print face) is proprietary and not shipped; legacy print collateral only.
 - The riyal symbol ⃁ requires Unicode-17 font support; production apps should ship the SAMA symbol font as fallback.
