@@ -2,11 +2,11 @@
 
 Speedi is a bilingual (Arabic / English) quick-commerce app for the Saudi market: groceries, convenience, pharmacy, and future service expansion. Brand promise — delivery is table stakes; **saving is the differentiator**. Promotions are the product's centerpiece: 30+ campaign types (BOGO, virtual bundles, free samples, coupons, spin-the-wheel, cashback…).
 
-**Slogans:** AR **«الكل يوصّلك، بس حنا نوفّر عليك»** · EN **"You Save. We Deliver."**
+**Slogans:** AR **«الكل يوصّلك، بس حنا نوفّر عليك»** · EN **"You save. We Deliver."**
 
 ## Foundations at a glance
 - **Color**: Speedi Red `#DD2A1F` (pressed `#B91F16`, tint `#FDEEEC`) — reserved for price, primary actions and price-cut campaigns. Green `#1EA13C` = success/fresh/free delivery. Ink `#262626`/`#595959`/`#8C8C8C`, titles `#141414`. Warm-neutral page `#F6F6F4`, hairlines `#EBEBE8`. Campaign accents: gold `#F5A800` (games/points), violet `#6C3BD4` (BOGO/bundles), blue `#2D6BFF` (coupons/cashback), pink `#E5387E` (samples/gifts). Pastel identity palette for category tiles and merch.
-- **Type**: Hanken Grotesk (EN) / Alexandria (AR), both 300–800. Scale: display 32/38 ExtraBold · H1 26/32 Bold · nav 17/22 Bold · body 15/22 · button 15/20 Bold · label 13/18 SemiBold · caption 11/15 · price 17 ExtraBold.
+- **Type**: Hanken Grotesk (EN) / Alexandria (AR), both 300–800. EN scale: display 32/38 ExtraBold · H1 26/32 Bold · nav 17/22 Bold · body 15/22 · button 15/20 Bold · label 13/18 SemiBold · caption 11/15 · price 17 ExtraBold. **Arabic downscale**: Alexandria runs visually larger/heavier, so Arabic text is ~80–85% of the EN size + one weight step lighter (nav 14/20 SemiBold, H1 21/28 SemiBold, display 26/34 Bold, body 13/20, button 13 SemiBold); `lang="ar"`/`dir="rtl"` adjusts the `--text-*` tokens automatically. Prices exempt (Western digits in EN font at EN sizes).
 - **Price convention**: the official riyal symbol ⃁ (U+20C1) before the amount — never "SR"/"SAR" text; Western digits in both languages (3.99, never ٣٫٩٩); symbol and decimals at ~62% of the integer size (`PriceText`); original price struck through in gray.
 - **Shape & elevation**: flat — white cards, 12px radius, no shadows; 8px controls; 100px pills; hairline dividers; 48px buttons/nav; 15pt page gutters.
 - **Motion**: 120/200/320ms, `cubic-bezier(0.2,0,0,1)`; press scale 0.97; 12px rise entrances; overshoot easing reserved for campaign celebrations only.
@@ -36,10 +36,10 @@ Iconsax-style line icons (linear default; outline/bold/bulk/broken/twotone varia
 - `components/core/` — all reusable components (with `.d.ts` contracts and `.prompt.md` usage notes) · `components/kit/` — verbatim Figma-file recreations (reference)
 - `ui_kits/app/` — the app screens + interactive shell
 - `guidelines/` — specimen cards, motion demo, **`brand-book-en.html`**, **`brand-book-ar.html`** (printable A4, localized not translated)
-- `assets/` — icons, merch imagery · `brand-sources/` — identity PDF + extracted merch examples · `SKILL.md` — agent skill entry
+- `assets/` — icons, merch imagery · `uploads/` — identity PDF + extracted merch examples · `SKILL.md` — agent skill entry
 
 ## Tagline options (EN)
-1. **"You Save. We Deliver." — the official English slogan.** Leads with the saving, lands on the delivery promise.
+1. **"You save. We Deliver." — the official English slogan.** Leads with the saving, lands on the delivery promise.
 2. "Fast is standard. Saving is Speedi."
 3. "Delivered fast. Priced smart."
 4. "More than delivered. Saved."
@@ -60,7 +60,7 @@ All 94 component families from the source Figma file, materialized verbatim with
 ## History & sources
 Refreshed in 2026 from the original Speedi identity (2019) and app design file. Sources, for the record:
 - Figma "Speedi V2 (Copy).fig": https://www.figma.com/design/cAKAxWXtNsMkPgimxwWBo6/Speedi-V2--Copy- (also https://www.figma.com/design/zq3EdZ1Fun2xb4BHcyyVXE/Speed?node-id=335-17775)
-- `brand-sources/speedi-guideline.pdf` — original identity guidelines (logo rules, print palette `#EE2447` PANTONE P 8-55 C, merch specs)
+- `uploads/speedi-guideline.pdf` — original identity guidelines (logo rules, print palette `#EE2447` PANTONE P 8-55 C, merch specs)
 - Refresh decisions: red deepened `#EF3F37→#DD2A1F`; Poppins→Hanken Grotesk; Alexandria for Arabic; campaign accent system, unified item card, motion principles, and profile completion added; slogan changed from «مقاضيك هي اللي تجيك» to «الكل يوصّلك، بس حنا نوفّر عليك».
 - The original Figma file's 94 raw component families are materialized verbatim in `components/kit/` (2019 styling, kept for reference and traceability); the refreshed `components/core` set is what new designs should use.
 
