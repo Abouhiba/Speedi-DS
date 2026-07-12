@@ -41,3 +41,35 @@
   --text-price-size: 17px;     /* price emphasis — ExtraBold red */
   --text-price-weight: 800;
 }
+
+/* Arabic downscale.
+   Alexandria renders visually larger and heavier than Hanken Grotesk at the
+   same px/weight, so Arabic UI drops one size step and one weight step
+   (e.g. nav 17 Bold → 14 SemiBold). Tokens inherit, so setting lang="ar" or
+   dir="rtl" on the page (or any container) adjusts everything inside it.
+   Prices are exempt — digits always render in --font-en at the EN scale. */
+[lang="ar"], [dir="rtl"], :lang(ar) {
+  --text-display-size: 26px;
+  --text-display-line: 34px;
+  --text-display-weight: 700;
+
+  --text-h1-size: 21px;
+  --text-h1-line: 28px;
+  --text-h1-weight: 600;
+
+  --text-nav-size: 14px;
+  --text-nav-line: 20px;
+  --text-nav-weight: 600;
+
+  --text-body-size: 13px;
+  --text-body-line: 20px;
+
+  --text-button-size: 13px;
+  --text-button-weight: 600;
+
+  --text-label-size: 11.5px;
+  --text-label-line: 16px;
+  --text-label-weight: 500;
+
+  --text-caption-size: 10px;
+}
